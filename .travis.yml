@@ -1,0 +1,12 @@
+language: go
+
+go:
+  - 1.14.x
+
+env:
+  - GO111MODULE=on
+
+go_import_path: github.com/gaojunhuicavon/gostream
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
