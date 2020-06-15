@@ -72,10 +72,12 @@ type errIntStream struct {
 	parallel bool
 }
 
+// NewSequentialIntStream returns a sequential ordered stream whose elements are the specified ints.
 func NewSequentialIntStream(ints []int) IntStream {
 	return &sequentialIntStream{ints}
 }
 
+// NewParallelIntStream returns a parallel stream whose elements are the specified ints.
 func NewParallelIntStream(ints []int) IntStream {
 	return &parallelIntStream{ints}
 }

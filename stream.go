@@ -83,6 +83,7 @@ type element struct {
 	reflectValue reflect.Value
 }
 
+// NewSequentialStream returns a sequential ordered stream whose elements are the specified data.
 func NewSequentialStream(data interface{}) Stream {
 	elements, err := convertDataToElements(data)
 	if err != nil {
@@ -94,6 +95,7 @@ func NewSequentialStream(data interface{}) Stream {
 	return &sequentialStream{elements}
 }
 
+// NewSequentialStream returns a parallel stream whose elements are the specified data.
 func NewParallelStream(data interface{}) Stream {
 	elements, err := convertDataToElements(data)
 	if err != nil {
@@ -105,6 +107,8 @@ func NewParallelStream(data interface{}) Stream {
 	return &parallelStream{elements}
 }
 
+// ConcatStream creates a concatenated stream whose elements are all the elements of the first stream followed by all
+// the elements of the second stream.
 func ConcatStream(a, b Stream) (c Stream) {
 	var aSlice, bSlice []interface{}
 	if err := a.Collect(&aSlice); err != nil {
