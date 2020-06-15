@@ -5,6 +5,7 @@ Gostream is a  Java like stream API written in Go. It support functional-style o
 [![Build Status](https://travis-ci.org/gaojunhuicavon/gostream.svg)](https://travis-ci.org/gaojunhuicavon/gostream)
 [![codecov](https://codecov.io/gh/gaojunhuicavon/gostream/branch/master/graph/badge.svg)](https://codecov.io/gh/gaojunhuicavon/gostream)
 [![GoDoc](https://godoc.org/github.com/gaojunhuicavon/gostream?status.svg)](https://pkg.go.dev/github.com/gaojunhuicavon/gostream?tab=doc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gaojunhuicavon/gostream)](https://goreportcard.com/report/github.com/gaojunhuicavon/gostream)
 
 ## Installation
 
