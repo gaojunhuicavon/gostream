@@ -74,6 +74,7 @@ type errFloat64Stream struct {
 	parallel bool
 }
 
+// NewSequentialFloat64Stream returns a sequential ordered stream whose elements are the specified data.
 func NewSequentialFloat64Stream(data []float64) Float64Stream {
 	if len(data) <= 0 {
 		return emptySequentialFloat64Stream
@@ -81,6 +82,7 @@ func NewSequentialFloat64Stream(data []float64) Float64Stream {
 	return &sequentialFloat64Stream{data}
 }
 
+// NewParallelFloat64Stream returns a parallel stream whose elements are the specified data.
 func NewParallelFloat64Stream(data []float64) Float64Stream {
 	if len(data) <= 0 {
 		return emptyParallelFloat64Stream
